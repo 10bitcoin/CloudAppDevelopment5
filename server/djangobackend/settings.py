@@ -27,9 +27,9 @@ DEBUG = True
 
 APPEND_SLASH = True
 
-ALLOWED_HOSTS = ["bkcelebi123.eu-gb.mybluemix.net", "localhost", "istdub2016.eu-gb.mybluemix.net"]
-
-CSRF_TRUSTED_ORIGINS = ['https://burakkcelebi-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/']
+#ALLOWED_HOSTS = ["bkcelebi123.eu-gb.mybluemix.net", "localhost", "istdub2016.eu-gb.mybluemix.net"]
+ALLOWED_HOSTS = ['vhui77.us-south.cf.appdomain.cloud','localhost']
+#CSRF_TRUSTED_ORIGINS = ['https://burakkcelebi-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/']
 # Application definition
 
 INSTALLED_APPS = [

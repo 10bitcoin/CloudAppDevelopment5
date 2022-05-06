@@ -9,12 +9,12 @@ import time
  
 
 def analyze_review_sentiments(text):
-    url = "https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/cb007f07-b4b8-405f-98b5-d66593e064a6"
-    api_key = "nLwYuMivkhd2QrWVfvptJJ7ZTanCAQuUJNeI1HU-jXtx"
+    url = "https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/dcbe40c8-8be3-4be3-b4c9-51c7b502916b"
+    api_key = "Dn1mJUGrVj7DbvRZ3Idbq2oCD0REqcHE0dBOTmmw0jGt"
     authenticator = IAMAuthenticator(api_key)
     natural_language_understanding = NaturalLanguageUnderstandingV1(version='2021-08-01',authenticator=authenticator)
     natural_language_understanding.set_service_url(url)
-    response = natural_language_understanding.analyze( text=text+"hello hello hello",features=Features(sentiment=SentimentOptions(targets=[text+"hello hello hello"]))).get_result()
+    response = natural_language_understanding.analyze(language='en',text=text+"hello hello hello",features=Features(sentiment=SentimentOptions(targets=[text+"hello hello hello"]))).get_result()
     label=json.dumps(response, indent=2)
     label = response['sentiment']['document']['label']
     
